@@ -26,3 +26,4 @@ SELECT name FROM artists WHERE name ILIKE 'a%';
 
 -- 5) Find all the tracks that belong to playlist 1.
 SELECT track_id FROM playlists_tracks WHERE playlist_id = 1;
+SELECT tracks.name, playlists_tracks.playlist_id FROM tracks INNER JOIN playlists_tracks ON playlists_tracks.track_id=tracks.id WHERE playlists_tracks.playlist_id = 1 ORDER BY tracks.id;
